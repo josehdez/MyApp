@@ -13,7 +13,8 @@ WORKDIR /opt/server
 
 # Instala los paquetes existentes en el package.json
 COPY package.json .
-RUN npm install --quiet
+RUN npm install 
+#--quiet
 
 #instala nodemon global
 RUN npm install nodemon -g --quiet

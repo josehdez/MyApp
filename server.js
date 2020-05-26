@@ -10,6 +10,7 @@ const bodyParser = require('body-parser')
 
 const indexRoute = require('./routes/index')
 const authorsRoute = require('./routes/authors')
+const booksRoute = require('./routes/books')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
@@ -31,6 +32,7 @@ db.once("open", () =>
 
 app.use('/', indexRoute)
 app.use('/authors', authorsRoute)
+app.use('/books', booksRoute)
 
 app.listen(process.env.PORT || 3000,  ()=>{
   console.log('\x1b[33m Express server puerto 3000...\x1b[43m\x1b[34m %s\x1b[0m', 'V ' + '1.0' +'\x1b[31m\x1b[46m Author: ' + 'JHC');
