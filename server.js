@@ -1,5 +1,5 @@
 if(process.env.NODE_ENV !== 'production'){
-  // require('dotenv').parse()
+  require('dotenv').parse()
   var DATABASE_URL="mongodb://db:27017/biblioteca"
 }
 
@@ -16,7 +16,7 @@ app.use(expressLayouts)
 app.use(express.static('public'))
 
 const mongoose = require('mongoose')
-mongoose.connect(DATABASE_URL, {useNewUrlParser: true})
+mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true})
 
 const db = mongoose.connection
 
