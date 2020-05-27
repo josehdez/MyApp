@@ -27,7 +27,7 @@ router.get("/new", (req, res) =>{
 //Guardar nuevo author
 router.post('/', async (req, res) =>{
   const author = new Author({
-    name : req.body.nombre
+    name : req.body.name
   })
   try {
     const newAuthor = await author.save();

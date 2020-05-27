@@ -1,7 +1,3 @@
-<h1>Recien Agregados</h1>
+<h2 class="page-header">Recien Agregados</h2>
 
-<div>
-  <% books.forEach(book =>{ %>
-  <img height="150" width="100" src="<%= book.coverImagePath %>">
-  <% }) %>
-</div>
+<%- include('partes/bookGrid', {books: books, large: true}) %> 

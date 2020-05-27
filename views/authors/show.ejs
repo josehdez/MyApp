@@ -1,9 +1,9 @@
-<h2><%= author.name  %></h2>
-<a href="/authors/<%= author.id %>/edit">Editar</a>
-<%- include('../partes/deleteForm', {url: `/authors/${author.id}` }) %>
+<h2 class="page-header"><%= author.name  %></h2>
+<div class="btn-row">
+  <a href="/authors/<%= author.id %>/edit" class="btn btn-primary">Editar</a>
+  <%- include('../partes/deleteForm', {url: `/authors/${author.id}` }) %>
+</div>
 <% if (booksByAuthor.length > 0) { %>
- <h2>Libros del autor</h2>
-<% booksByAuthor.forEach(book =>{ %>
-  <img height="150" width="100" src="<%= book.coverImagePath %>">
-<% }) %>
+  <h2 class="page-header">Libros del autor</h2>
+  <%- include('../partes/bookGrid', {books: booksByAuthor}) %> 
 <% } %>
