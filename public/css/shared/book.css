@@ -19,6 +19,9 @@
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fill, var(--book-cover-width));
 }
+.book-grid-large{
+  grid-template-columns: repeat(auto-fill, var(--book-cover-width-large));
+}
 
 .book-details{
   display: flex;

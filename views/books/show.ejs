@@ -1,7 +1,7 @@
 <h2 class="page-header"><%= book.title %> </h2>
 <div class="book-details">
   <div>
-    <img height="150" width="100" src="<%= book.coverImagePath %>">
+    <img class="book-cover" src="<%= book.coverImagePath %>">
     <div class="book-details-btn-grid">
       <a href="/books/<%= book.id %>/edit" class="btn btn-primary">Editar</a>
       <%- include('../partes/deleteForm', {url: `/books/${book.id}`}) %>
